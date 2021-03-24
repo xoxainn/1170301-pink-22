@@ -1,7 +1,7 @@
 # Личный проект «Пинк» 
 
 * Студент: [Сергей Тепляков](https://up.htmlacademy.ru/adaptive/22/user/1170301).
-* Наставник: [Дмитрий Мирошниченко] (https://htmlacademy.ru/profile/id591417) .
+* Наставник: [Дмитрий Мирошниченко](https://htmlacademy.ru/profile/id591417) .
 
 ---
 
