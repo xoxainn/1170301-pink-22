@@ -27,51 +27,115 @@
       </ul>
     </div>
   </header>
-  <main class="page-main registration-page">
-    <h1 class="registration-page__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
-    <p class="registration-page__subtitle">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
-    <form class="registration-page__form form" action="https://echo.htmlacademy.ru" method="GET" >
-      <fieldset class="form__fieldset ident-fieldset">
-        <label class="ident-fieldset__label sirname-label ">Фамилия<input class="sirname-label__input" type="text" name="Фамилия" value="Укажите фамилию *" required></label>
-        <label class="ident-fieldset__label name-label ">Имя<input class="name-label__input" type="text" name="Имя" required value="Введите ваше имя *"></label>
-        <label class="ident-fieldset__label last-name-label ">Отчество<input class="last-name-label__input" type="text" name="Отчество" value="Ну и отчество тоже"></label>
-      </fieldset>
-      <fieldset class="form__fieldset achievement-fieldset">
-        <p class="form__fieldset__text achievement-fieldset__text">Ваши безбашенные достижения в путешествии</p>
-        <label class="achievement-fieldset__label"><input class="achievement-fieldset__input" type="checkbox" name="Сделал селфи с акулой" checked>Сделал селфи с акулой</label>
-        <label class="achievement-fieldset__label"><input class="achievement-fieldset__input" type="checkbox" name="Обгорел на пляже" checked >Обгорел на пляже</label>
-        <label class="achievement-fieldset__label"><input class="achievement-fieldset__input" type="checkbox" name="Видел Чака Норриса" >Видел Чака Норриса</label>
-        <label class="achievement-fieldset__label"><input class="achievement-fieldset__input" type="checkbox" name="Накупил сувениров" >Накупил сувениров</label>
-        <label class="achievement-fieldset__label"><input class="achievement-fieldset__input" type="checkbox" name="Удержал башню" checked >Удержал башню</label>
-        <label class="achievement-fieldset__label"><input class="achievement-fieldset__input" type="checkbox" name="Разгромил отель" >Разгромил отель</label>
-      </fieldset>
-      <fieldset class="form__fieldset contacts-fieldset">
-        <label class="contacts-fieldset__label phone-label">Номер телефона<input class="contacts-fieldset__input phone-input" type="tel" name="tel" value="Номер,пожалуйста"></label>
-        <label class="contacts-fieldset__label email-label">Адрес почты<input class="contacts-fieldset__input email-input" type="email" name="email" value="Введите почту*" required></label>
-      </fieldset>
-      <fieldset class="form__fieldset os-fieldset">
-        <p class="form__fieldset__text os-fieldset__text">С каким приложением путешествовали?</p>
-        <label class="os-fieldset__label"><input class="os-fieldset__input" type="radio" name="os" value="iOS" checked>Pink для iOS </label>
-        <label class="os-fieldset__label"><input class="os-fieldset__input" type="radio" name="os" value="Android">Pink на Android </label>
-        <label class="os-fieldset__label"><input class="os-fieldset__input" type="radio" name="os" value="Windows-phone">Windows Phone</label>
-      </fieldset>
-      <fieldset class="form__fieldset comment-fieldset">
-        <p class="form__fieldset__text comment-fieldset__text">Опишите свои эмоции</p>
-        <textarea class="comment-fieldset__textarea" name="comments" cols="30" rows="10" >Можно прям в красках, не стесняясь в выражениях</textarea>
-      </fieldset>
-      <input class="form__submit" type="submit" value="отправить форму">
-      <p class="form__note note "><span class="note__element" >*</span> — обязательные поля</p>
-    </form>
-    <div class="success-pop-up pop-up visually-hidden">
-      <strong class="success-pop-up__title pop-up__title">Ваша заявка отправлена</strong>
-      <p class="success-pop-up__text pop-up__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
-      <button class="success-pop-up__button pop-up__button">Закрыть окно</button>
-    </div>
-    <div class="failure-pop-up pop-up visually-hidden">
-      <strong class="failure-pop-up__title pop-up__title">Что-то пошло не так!</strong>
-      <p class="failure-pop-up__text pop-up__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="failure-pop-up__button pop-up__button">ok</button>
-    </div>
+  <main class="page-main">
+    <section class="registration-page">
+      <h1 class="visually-hidden">Форма регистрации в нашем конкурсе</h1>
+      <p class="registration-page__title">Конкурс на самое безбашенное путешествие с Пинк</p>
+      <p class="registration-page__subtitle">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль
+        на вашу бонусную карту!</p>
+      <form class="registration-page__form form" action="https://echo.htmlacademy.ru" method="GET">
+        <fieldset class="form__fieldset ident-fieldset">
+          <ul class="ident-fieldset__list">
+            <li class="ident-fieldset__item">
+              <label class="ident-fieldset__label sirname-label " for="sirname-field">Фамилия</label>
+              <input class="ident-fieldset__input sirname-input" type="text" name="Фамилия" id="sirname-field"
+                value="Укажите фамилию *" required>
+            </li>
+            <li class="ident-fieldset__item">
+              <label class="ident-fieldset__label name-label " for="name-field">Имя</label>
+              <input class="ident-fieldset__input name-input" type="text" name="Имя" id="name-field"
+                value="Введите ваше имя *" required>
+            </li>
+            <li class="ident-fieldset__item">
+              <label class="ident-fieldset__label last-name-label" for="last-name-field">Отчество</label>
+              <input class="ident-fieldset__input last-name-input" type="text" name="Отчество" id="last-name-field"
+                value="Ну и отчество тоже">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__fieldset achievement-fieldset">
+          <p class="form__fieldset__text achievement-fieldset__text">Ваши безбашенные достижения в путешествии</p>
+          <ul class="achievement-fieldset__list">
+            <li class="achievement-fieldset__item">
+              <label class="achievement-fieldset__label" for="shark-photo-field">Сделал селфи с акулой</label>
+              <input class="achievement-fieldset__input" type="checkbox" name="Сделал селфи с акулой"
+                id="shark-photo-field" checked>
+            </li>
+            <li class="achievement-fieldset__item">
+              <label class="achievement-fieldset__label" for="sunburned-field">Обгорел на пляже</label>
+              <input class="achievement-fieldset__input" type="checkbox" name="Обгорел на пляже" id="sunburned-field"
+                checked>
+            </li>
+            <li class="achievement-fieldset__item">
+              <label class="achievement-fieldset__label" for="chuck-field">Видел Чака Норриса</label>
+              <input class="achievement-fieldset__input" type="checkbox" name="Видел Чака Норриса" id="chuck-field">
+            </li>
+            <li class="achievement-fieldset__item">
+              <label class="achievement-fieldset__label" for="gift-field">Накупил сувениров</label>
+              <input class="achievement-fieldset__input" type="checkbox" name="Накупил сувениров" id="gift-field">
+            </li>
+            <li class="achievement-fieldset__item">
+              <label class="achievement-fieldset__label" for="tower-field">Удержал башню</label>
+              <input class="achievement-fieldset__input" type="checkbox" name="Удержал башню" id="tower-field" checked>
+            </li>
+            <li class="achievement-fieldset__item">
+              <label class="achievement-fieldset__label" for="hotel-crush-field">Разгромил отель</label>
+              <input class="achievement-fieldset__input" type="checkbox" name="Разгромил отель" id="hotel-crush-field">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__fieldset contacts-fieldset">
+          <ul class="contacts-fieldset__list">
+            <li class="contacts-fieldset__item">
+              <label class="contacts-fieldset__label phone-label" for="tel-field">Номер телефона</label>
+              <input class="contacts-fieldset__input phone-input" type="tel" name="tel" id="tel-field"
+                value="Номер,пожалуйста">
+            </li>
+            <li class="contacts-fieldset__item">
+              <label class="contacts-fieldset__label email-label" for="email-field">Адрес почты</label>
+              <input class="contacts-fieldset__input email-input" type="email" name="email" id="email-field"
+                value="Введите почту*" required>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__fieldset os-fieldset">
+          <p class="form__fieldset__text os-fieldset__text">С каким приложением путешествовали?</p>
+          <ul class="os-fieldset__list">
+            <li class="os-fieldset__item">
+              <label class="os-fieldset__label" for="ios-field">Pink для iOS </label>
+              <input class="os-fieldset__input" type="radio" name="os" id="ios-field" value="iOS" checked>
+            </li>
+            <li class="os-fieldset__item">
+              <label class="os-fieldset__label" for="android-field">Pink на Android </label>
+              <input class="os-fieldset__input" type="radio" name="os" id="android-field" value="Android">
+            </li>
+            <li class="os-fieldset__item">
+              <label class="os-fieldset__label" for="windows-field">Windows Phone</label>
+              <input class="os-fieldset__input" type="radio" name="os" id="windows-field" value="Windows-phone">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__fieldset comment-fieldset">
+          <p class="form__fieldset__text comment-fieldset__text">Опишите свои эмоции</p>
+          <textarea class="comment-fieldset__textarea" name="comments" cols="30"
+            rows="10">Можно прям в красках, не стесняясь в выражениях</textarea>
+        </fieldset>
+        <button class="form__submit" type="submit" value="отправить форму">Отправить форму</button>
+        <p class="form__note note "><span class="note__element">*</span> — обязательные поля</p>
+      </form>
+      <div class="success-pop-up pop-up visually-hidden">
+        <strong class="success-pop-up__title pop-up__title">Ваша заявка отправлена</strong>
+        <p class="success-pop-up__text pop-up__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В
+          ближайшее время мы рассмотрим ее и оповестим вас.</p>
+        <button class="success-pop-up__button pop-up__button">Закрыть окно</button>
+      </div>
+      <div class="failure-pop-up pop-up visually-hidden">
+        <strong class="failure-pop-up__title pop-up__title">Что-то пошло не так!</strong>
+        <p class="failure-pop-up__text pop-up__text">Проверьте поля, выделенные красным, скорее всего вы забыли их
+          заполнить</p>
+        <button class="failure-pop-up__button pop-up__button">ok</button>
+      </div>
+    </section>
   </main>
   <footer class="page-footer">
     <div class="footer-logo">
@@ -118,10 +182,10 @@
       <p class="site-creator__description">Разработано</p>
       <a class="site-creator__link" href="https://htmlacademy.ru/intensive/adaptive">
         <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"
-          fill="#D22856" />
-      </svg>
+          <path
+            d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"
+            fill="#D22856" />
+        </svg>
       </a>
     </div>
   </footer>
