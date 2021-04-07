@@ -113,29 +113,31 @@
       <h2 class="visually-hidden">Здесь Вы можете обработать и запостить свои фото</h2>
       <p class="upload__subtitle">Затмите их всех!</p>
       <p class="upload__subtitle">Выкладывайте всё, что накопилось в телефоне!</p>
-      <img class="upload__image" src="snow-road.jpg" alt="Снежная дорога">
-      <div class="upload__form ">
-        <form class="modify-form" action="https://echo.htmlacademy.ru" method="GET">
-          <ul class="modify-form__list">
-            <li class="modify-form__item">
-              <label class="modify-form__label crop-label crop-label--crop" for="crop-field">crop</label>
-              <input class="modify-form__input crop-input" type="range" id="crop-field" min="1" max="100" value="80">
-            </li>
-            <li class="modify-form__item">
-              <label class="modify-form__label fill-label fill-label--fill " for="fill-field" >fill</label>
-              <input class="modify-form__input fill-input" type="range" id="fill-field" min="1" max="100" value="10">
-            </li>
-            <li class="modify-form__item">
-            <label class="modify-form__label contrast-label contrast-label--contrast" for="contrast-field">contrast</label>
-              <input class="modify-form__input contrast-input" type="range" id="contrast-field" min="1" max="100" value="50">
-            </li>
-          </ul>
-            <button class="modify-form__button modify-form__button--post button " type="submit"
-              value="Запостить">Запостить</button>
-            <button class="modify-form__button modify-form__button--cancel button" type="reset"
-              value="Отмена">Отмена</button>
-        </form>
-      </div>
+      <form class="upload__form modify-form" action="https://echo.htmlacademy.ru" method="post">
+        <label class="upload__label" for="image-id"><img class="upload__image" src="snow-road.jpg"
+            alt="Снежная дорога"></label>
+        <input class="upload__input" type="file" id="image-id" name="image">
+        <ul class="modify-form__list">
+          <li class="modify-form__item">
+            <label class="modify-form__label crop-label crop-label--crop" for="crop-field">crop</label>
+            <input class="modify-form__input crop-input" type="range" id="crop-field" min="1" max="100" value="80">
+          </li>
+          <li class="modify-form__item">
+            <label class="modify-form__label fill-label fill-label--fill " for="fill-field">fill</label>
+            <input class="modify-form__input fill-input" type="range" id="fill-field" min="1" max="100" value="10">
+          </li>
+          <li class="modify-form__item">
+            <label class="modify-form__label contrast-label contrast-label--contrast"
+              for="contrast-field">contrast</label>
+            <input class="modify-form__input contrast-input" type="range" id="contrast-field" min="1" max="100"
+              value="50">
+          </li>
+        </ul>
+        <button class="modify-form__button modify-form__button--post button " type="submit"
+          value="Запостить">Запостить</button>
+        <button class="modify-form__button modify-form__button--cancel button" type="reset"
+          value="Отмена">Отмена</button>
+      </form>
     </section>
   </main>
   <footer class="page-footer">

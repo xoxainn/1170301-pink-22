@@ -1,0 +1,32 @@
+.prices-table {
+  border-collapse: collapse;
+}
+
+.prices-table__hedline {
+  background-color: rgba(40, 54, 69, 1);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 1);
+
+  &--empty {
+    visibility: hidden;
+  }
+}
+
+.prices-table__name {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.prices-table__cell {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  border: 2px solid rgba(229, 229, 229, 1);
+}
+
+.prices__toggles-list {
+  list-style: none;
+}

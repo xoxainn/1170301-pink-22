@@ -4,12 +4,13 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
   <header class="page-header">
     <div class="main-nav">
-      <img class="main-logo" src="logo.png" width="74" height="23" alt="Главный логотип">
+      <img class="main-nav__logo" src="logo.png" width="74" height="23" alt="Главный логотип">
       <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
@@ -29,23 +30,23 @@
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Мобильное приложение для обработки фотографий "Pink"</h1>
+    <p class="page-main__slogan page-main__text">Взгляните на жизнь иначе!</p>
     <section class="download-area">
       <h2 class="visually-hidden">Скачайте наше приложение</h2>
-      <p class="slogan">Взгляните на жизнь иначе!</p>
       <a class="download-area__button" href="https://www.apple.com/ru/app-store/">Скачать приложение</a>
       <ul class="download-area__list">
         <li class="download-area__item">
-          <a class="download-area__link apple-link" href="https://www.apple.com/ru/app-store/">
+          <a class="download-area__link download-area__link--apple" href="https://www.apple.com/ru/app-store/">
             <span class="visually-hidden">Ссылка на App Store</span>
           </a>
         </li>
         <li class="download-area__item">
-          <a class="download-link android-link" href="https://play.google.com/store?hl=ru&gl=US">
+          <a class="download-area__link download-area__link--android" href="https://play.google.com/store?hl=ru&gl=US">
             <span class="visually-hidden">Ссылка на Play Market</span>
           </a>
         </li>
         <li class="download-area__item">
-          <a class="download-area__link windows-link" href="https://www.microsoft.com/ru-ru/store/apps">
+          <a class="download-area__link download-area__link--windows" href="https://www.microsoft.com/ru-ru/store/apps">
             <span class="visually-hidden">Ссылка на Microsoft Store</span>
           </a>
         </li>
@@ -54,8 +55,8 @@
     </section>
     <section class="features">
       <h2 class="visually-hidden">Приемущества нашего приложения</h2>
-      <p class="features__subtitle">Устали от серости мегаполиса?</p>
-      <p class="features__subtitle">Нам есть что вам предложить!</p>
+      <p class="features__subtitle page-main__text">Устали от серости мегаполиса?</p>
+      <p class="features__subtitle page-main__text">Нам есть что вам предложить!</p>
       <ul class="features__list">
         <li class="features__item">
           <h3 class="features__title">Поднимает настроение</h3>
@@ -99,10 +100,10 @@
             серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</q>
         </li>
       </ul>
-      <button class="reviews__button button-prev"></button>
-      <button class="reviews__button button-next"></button>
+      <button class="reviews__button reviews__button--prev visually-hidden"></button>
+      <button class="reviews__button reviews__button--next visually-hidden"></button>
       <ul class="reviews__toggles-list slider__toggles-list toggles-list">
-        <li class="toggles-list__item"><button class="slider-toggle toggle-current"></button></li>
+        <li class="toggles-list__item"><button class="slider-toggle slider-toggle--current "></button></li>
         <li class="toggles-list__item"><button class="slider-toggle"></button></li>
         <li class="toggles-list__item"><button class="slider-toggle"></button></li>
       </ul>
@@ -111,19 +112,22 @@
       <h2 class="visually-hidden">Наши тарифы</h2>
       <table class="prices-table">
         <tr class="prices-table__names">
-          <th class="prices-table__hedline empty"></th>
-          <th class="prices-table__hedline"><b class="prices__name">База</b>1,99 USD</th>
-          <th class="prices-table__hedline hit"><b class="prices__name">Стандарт</b>3,99 USD</th>
-          <th class="prices-table__hedline"><b class="prices__name">Анлим</b>9,99 USD</th>
+          <th class="prices-table__hedline prices-table__hedline--empty"></th>
+          <th class="prices-table__hedline"><b class="prices-table__name">База</b>1,99 USD</th>
+          <th class="prices-table__hedline hit"><b class="prices-table__name">Стандарт</b>3,99 USD</th>
+          <th class="prices-table__hedline"><b class="prices-table__name">Анлим</b>9,99 USD</th>
         </tr>
         <tr class="prices-table__row">
           <td class="prices-table__cell">Розовый фильтр</td>
-          <td class="prices-table__cell prices-table__cell--yes"><span class="prices-table__option">Розовый фильтр</span>
+          <td class="prices-table__cell prices-table__cell--yes"><span class="prices-table__option">Розовый
+              фильтр</span>
           </td>
-          <td class="prices-table__cell prices-table__cell--yes"><span class="prices-table__option">Розовый фильтр</span></td>
-          <td class="prices-table__cell prices-table__cell--yes"><span class="prices-table__option">Розовый фильтр</span></td>
+          <td class="prices-table__cell prices-table__cell--yes"><span class="prices-table__option">Розовый
+              фильтр</span></td>
+          <td class="prices-table__cell prices-table__cell--yes"><span class="prices-table__option">Розовый
+              фильтр</span></td>
         </tr>
-        <tr class="prices__row">
+        <tr class="prices-table__row">
           <td class="prices-table__cell">Смайлики</td>
           <td class="prices-table__cell prices-table__cell--no"><span class="prices-table__option">Смайлики</span></td>
           <td class="prices-table__cell prices-table__cell--yes"><span class="prices-table__option">Смайлики</span></td>
@@ -131,9 +135,12 @@
         </tr>
         <tr class="prices-table__row">
           <td class="prices-table__cell">Комментарии</td>
-          <td class="prices-table__cell prices-table__cell--no"><span class="prices-table__option">Комментарии</span></td>
-          <td class="prices-table__cell prices-table__cell--no"><span class="prices-table__option">Комментарии</span></td>
-          <td class="prices-table__cell prices-table__cell--yes"><span class="prices-table__option">Комментарии</span></td>
+          <td class="prices-table__cell prices-table__cell--no"><span class="prices-table__option">Комментарии</span>
+          </td>
+          <td class="prices-table__cell prices-table__cell--no"><span class="prices-table__option">Комментарии</span>
+          </td>
+          <td class="prices-table__cell prices-table__cell--yes"><span class="prices-table__option">Комментарии</span>
+          </td>
         </tr>
       </table>
       <ul class="prices__toggles-list slider__toggles-list toggles-list">
@@ -143,18 +150,18 @@
       </ul>
     </section>
     <section class="contacts">
-      <h2 class="contacts__title">Остались вопросы?Свяжитесь с нами!</h2>
+      <h2 class="contacts__title page-main__text">Остались вопросы?Свяжитесь с нами!</h2>
       <div class="contacts__phone">
         <p class="contacts__text">Звоните:</p>
-        <a class="phone contacts__link" href="tel:+78125556666">+7(812)555-66-66</a>
+        <a class="contacts__link contacts__link--phone" href="tel:+78125556666">+7(812)555-66-66</a>
       </div>
       <div class="contacts__email">
         <p class="contacts__text">Пишите:</p>
-        <a class="email contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        <a class="contacts__link contacts__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
       </div>
       <div class="contacts__address">
         <p class="contacts__text">Приезжайте в гости:</p>
-        <address class="address contacts__link">ул. Большая Конюшенная, 19/8</address>
+        <address class="contacts__link contacts__link--address">ул. Большая Конюшенная, 19/8</address>
       </div>
       <img src="map.jpg" width="320" height="200" alt="Наше местоположение">
     </section>
@@ -169,7 +176,7 @@
     <div class="footer-socials">
       <ul class="footer-socials__list">
         <li class="footer-socials__item">
-          <a class="footer-socials__link twitter-link" href="https://twitter.com/">
+          <a class="footer-socials__link footer-socials__link--twitter" href="https://twitter.com/">
             <span class="visually-hidden">Ссылка на Twitter</span>
             <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -179,7 +186,7 @@
           </a>
         </li>
         <li class="footer-socials__item">
-          <a class="footer-socials__link facebook-link" href="https://ru-ru.facebook.com/">
+          <a class="footer-socials__link footer-socials__link--facebook" href="https://ru-ru.facebook.com/">
             <span class="visually-hidden">Ссылка на facebook</span>
             <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -189,7 +196,7 @@
           </a>
         </li>
         <li class="footer-socials__item">
-          <a class="footer-socials__link youtube-link" href="https://www.youtube.com/">
+          <a class="footer-socials__link footer-socials__link--youtube" href="https://www.youtube.com/">
             <span class="visually-hidden">Ссылка на Youtube</span>
             <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -204,10 +211,10 @@
       <p class="site-creator__description">Разработано</p>
       <a class="site-creator__link" href="https://htmlacademy.ru/intensive/adaptive">
         <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"
-          fill="#D22856" />
-      </svg>
+          <path
+            d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"
+            fill="#D22856" />
+        </svg>
       </a>
     </div>
   </footer>
