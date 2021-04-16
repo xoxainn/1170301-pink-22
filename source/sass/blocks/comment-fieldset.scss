@@ -1,6 +1,4 @@
 .comment-fieldset__textarea {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  color: rgba(40, 54, 69, 1);
+  font: inherit;
+  color: $blue-deep;
 }
