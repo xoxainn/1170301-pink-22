@@ -3,11 +3,11 @@
 }
 
 .prices-table__hedline {
-  background-color: rgba(40, 54, 69, 1);
+  background-color: $blue-deep;
   font-weight: 300;
   font-size: 18px;
   line-height: 30px;
-  color: rgba(255, 255, 255, 1);
+  color: $white;
 
   &--empty {
     visibility: hidden;
@@ -24,7 +24,7 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
-  border: 2px solid rgba(229, 229, 229, 1);
+  border: 2px solid $gray;
 }
 
 .prices__toggles-list {

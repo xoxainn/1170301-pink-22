@@ -1,14 +1,7 @@
+.os-fieldset {
+  background-color: $gray-light;
+}
+
 .os-fieldset__list {
   list-style: none;
-}
-
-.os-fieldset {
-  background-color: rgba(242, 242, 242, 1);
-}
-
-.os-fieldset__label {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  color: rgba(40, 54, 69, 1);
 }

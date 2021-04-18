@@ -1,10 +1,10 @@
 .download-area {
-  background-color: rgba(29, 38, 49, 1);
-  color: rgba(255, 255, 255, 1);
+  background-color: $blue-dark;
+  color: $white;
 }
 
 .download-area__button {
-  border: 3px solid rgba(255, 255, 255, 1);
+  border: 3px solid $white;
   border-radius: 29px;
   font-weight: 700;
   color: inherit;

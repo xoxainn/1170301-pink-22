@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-body catalog-body">
@@ -21,7 +22,7 @@
           <a class="main-nav__link">фотографии</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">конкурс</a>
+          <a class="main-nav__link" href="form.html">конкурс</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">html academy</a>
@@ -119,23 +120,23 @@
         <input class="upload__input" type="file" id="image-id" name="image">
         <ul class="modify-form__list">
           <li class="modify-form__item">
-            <label class="modify-form__label crop-label crop-label--crop" for="crop-field">crop</label>
-            <input class="modify-form__input crop-input" type="range" id="crop-field" min="1" max="100" value="80">
+            <label class="modify-form__label modify-form__label--crop" for="crop-field">crop</label>
+            <input class="modify-form__input modify-form__input--crop" type="range" id="crop-field" min="1" max="100" value="80">
           </li>
           <li class="modify-form__item">
-            <label class="modify-form__label fill-label fill-label--fill " for="fill-field">fill</label>
-            <input class="modify-form__input fill-input" type="range" id="fill-field" min="1" max="100" value="10">
+            <label class="modify-form__label modify-form__label--fill " for="fill-field">fill</label>
+            <input class="modify-form__input modify-form__input--fill" type="range" id="fill-field" min="1" max="100" value="10">
           </li>
           <li class="modify-form__item">
-            <label class="modify-form__label contrast-label contrast-label--contrast"
+            <label class="modify-form__label modify-form__label--contrast"
               for="contrast-field">contrast</label>
-            <input class="modify-form__input contrast-input" type="range" id="contrast-field" min="1" max="100"
+            <input class="modify-form__input modify-form__input--contrast" type="range" id="contrast-field" min="1" max="100"
               value="50">
           </li>
         </ul>
-        <button class="modify-form__button modify-form__button--post button " type="submit"
+        <button class="modify-form__button modify-form__button--post" type="submit"
           value="Запостить">Запостить</button>
-        <button class="modify-form__button modify-form__button--cancel button" type="reset"
+        <button class="modify-form__button modify-form__button--cancel" type="reset"
           value="Отмена">Отмена</button>
       </form>
     </section>

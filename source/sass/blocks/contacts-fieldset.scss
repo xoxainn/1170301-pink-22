@@ -1,3 +1,7 @@
+.contacts-fieldset {
+  background-color: transparent;
+}
+
 .contacts-fieldset__list {
   list-style: none;
 }
@@ -5,15 +9,11 @@
 
 .contacts-fieldset__label {
   text-transform: uppercase;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 30px;
-  color: rgba(210, 40, 86, 1);
+  color: $pink;
 }
 
 .contacts-fieldset__input {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  color: rgba(40, 54, 69, 1);
+  font: inherit;
+  color: $blue-deep;
 }

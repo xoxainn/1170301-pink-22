@@ -2,21 +2,24 @@
   background-color: transparent;
 }
 
+.form__fieldset {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+
 .form__legend {
   text-transform: uppercase;
-  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  color: rgba(210, 40, 86, 1);
+  color: $pink;
 }
 
 .form__note {
-  font-weight: 400;
+  text-transform: uppercase;
   font-size: 14px;
-  line-height: 30px;
-  color: rgb(40, 54, 69);
 
   &--alarm {
-    color: rgb(210, 40, 86);
+    color: $pink;
   }
 }

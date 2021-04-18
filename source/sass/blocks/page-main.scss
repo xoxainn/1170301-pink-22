@@ -1,15 +1,15 @@
 .page-main {
   background-color: white;
+  color: $blue-deep;
 }
 
 .page-main__text {
   font-weight: 300;
   font-size: 24px;
   line-height: 120%;
-  color: rgba(40, 54, 69, 1);
 }
 
 .page-main__slogan {
-  color: white;
-  background-color: gray;
+  color: $white;
+  background-color: $blue-deep;
 }
