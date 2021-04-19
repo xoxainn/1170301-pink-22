@@ -1,0 +1,30 @@
+.additional-info {
+  min-height: 330px;
+  background-color: $white;
+  font-weight: normal;
+  font-size: 14px;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $gray-light;
+    min-height: 429px;
+  }
+}
+
+.additional-info__title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  color: $black;
+}
+
+.additional-info__description {
+  color: $blue-deep;
+}
+
+.additional-info__link {
+  color: $pink;
+}

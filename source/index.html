@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -30,8 +31,8 @@
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Мобильное приложение для обработки фотографий "Pink"</h1>
-    <p class="page-main__slogan page-main__text">Взгляните на жизнь иначе!</p>
     <section class="download-area">
+      <p class="page-main__slogan page-main__text">Взгляните на жизнь иначе!</p>
       <h2 class="visually-hidden">Скачайте наше приложение</h2>
       <a class="download-area__button" href="https://www.apple.com/ru/app-store/">Скачать приложение</a>
       <ul class="download-area__list">
@@ -75,33 +76,37 @@
         </li>
       </ul>
     </section>
-    <!--<section class="additional-info">
+    <section class="additional-info">
       <h2 class="additional-info__title">Эффект на 24 часа!</h2>
-      <p class="additional-info__description">Британские ученые провели исследования и доказали, что положительный эффект
+      <p class="additional-info__description">Британские ученые провели исследования и доказали, что положительный
+        эффект
         от использования приложения длится целые сутки!</p>
       <a class="additional-info__link" href="#">Узнать больше об исследовании</a>
-      </section> -->
+    </section>
     <section class="reviews slider">
       <h2 class="visually-hidden">Отзывы о нашем приложении</h2>
       <ul class="reviews__list slider__list">
         <li class="reviews__item slider__item">
           <cite class="reviews__autor">Николай Петров</cite>
+          <p class="reviews__info">25 лет, водитель трамвая</p>
           <q class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
             серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</q>
         </li>
         <li class="reviews__item slider__item">
           <cite class="reviews__autor">Николай Петров</cite>
+          <p class="reviews__info">25 лет, водитель трамвая</p>
           <q class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
             серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</q>
         </li>
         <li class="reviews__item slider__item">
           <cite class="reviews__autor">Николай Петров</cite>
+          <p class="reviews__info">25 лет, водитель трамвая</p>
           <q class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
             серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</q>
         </li>
       </ul>
-      <button class="reviews__button reviews__button--prev visually-hidden"></button>
-      <button class="reviews__button reviews__button--next visually-hidden"></button>
+      <button class="reviews__button reviews__button--prev"></button>
+      <button class="reviews__button reviews__button--next"></button>
       <ul class="reviews__toggles-list slider__toggles-list toggles-list">
         <li class="toggles-list__item"><button class="slider-toggle slider-toggle--current "></button></li>
         <li class="toggles-list__item"><button class="slider-toggle"></button></li>
@@ -163,7 +168,7 @@
         <p class="contacts__text">Приезжайте в гости:</p>
         <address class="contacts__link contacts__link--address">ул. Большая Конюшенная, 19/8</address>
       </div>
-      <img src="map.jpg" width="320" height="200" alt="Наше местоположение">
+      <img class="contacts__map" src="map.jpg" width="320" height="200" alt="Наше местоположение">
     </section>
   </main>
   <footer class="page-footer">

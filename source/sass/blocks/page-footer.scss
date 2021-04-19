@@ -1,4 +1,9 @@
 .page-footer {
   background-color: $white;
   color: $blue-deep;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }

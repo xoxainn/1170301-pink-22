@@ -5,10 +5,28 @@
   font-weight: 700;
   color: $white;
   text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    /*justify-content: space-between;*/
+    background-color: $black-transparent;
+  }
+}
+
+.main-nav__logo {
+  @media (min-width: $desktop-width) {
+    width: 250px;
+  }
 }
 
 .main-nav__list {
+  margin: 0;
   list-style: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .main-nav__item {
@@ -18,4 +36,10 @@
 .main-nav__link {
   text-decoration: none;
   color: inherit;
+}
+
+.main-nav__toggle {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }

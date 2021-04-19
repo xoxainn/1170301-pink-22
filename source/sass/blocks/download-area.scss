@@ -1,6 +1,21 @@
 .download-area {
   background-color: $blue-dark;
   color: $white;
+
+  @media (min-width: $tablet-width) {
+    /*Закомментировал для видимости background-color: transparent;*/
+    background-color: black;
+    min-height: 545px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 745px;
+  }
+}
+
+.download-area__list {
+  list-style: none;
+  display: flex;
 }
 
 .download-area__button {
