@@ -16,7 +16,7 @@
 .reviews__item {
   @media (min-width: $tablet-width) {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 
@@ -26,13 +26,11 @@
   color: $black;
 
   @media (min-width: $tablet-width) {
-    order: 3;
     font-size: 20px;
   }
 }
 
 .reviews__info {
-  order: 3;
   font-size: 14px;
 
   @media (max-width: $tablet-width) {
@@ -44,7 +42,6 @@
   display: block;
 
   @media (min-width: $tablet-width) {
-    order: -1;
     font-size: 18px;
   }
 }
