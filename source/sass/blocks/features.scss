@@ -1,5 +1,14 @@
 .features {
   background-color: $gray-light;
+  min-height: 1000px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 730px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 900px;
+  }
 }
 
 .features__subtitle {
@@ -8,6 +17,10 @@
 
 .features__list {
   list-style: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }
 
 .features__title {
