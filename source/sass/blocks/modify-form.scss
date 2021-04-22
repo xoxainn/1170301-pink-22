@@ -1,5 +1,17 @@
 .modify-form {
   background-color: $gray-light;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1fr, 4);
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(1fr, 4);
+    grid-template-rows: repeat(1fr, 4);
+  }
 }
 
 .modify-form__list {
@@ -10,7 +22,41 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
+  width: 280px;
+  height: 55px;
   border: 3px solid $pink;
   border-radius: 30px;
   color: $pink;
+
+  @media (min-width: $tablet-width) {
+    width: 260px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 183px;
+  }
+
+  &--post {
+    @media (min-width: $tablet-width) {
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: 3/4;
+      grid-row: 4/5;
+    }
+  }
+
+  &--cancel {
+    @media (min-width: $tablet-width) {
+      grid-column: 2/3;
+      grid-row: 4/5;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: 4/5;
+      grid-row: 4/5;
+    }
+  }
 }
