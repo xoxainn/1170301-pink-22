@@ -1,15 +1,35 @@
 .form {
   background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
 
 .form__fieldset {
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
+  border: 2px solid $gray;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.form__submit {
+  @media (min-width: $tablet-width) {
+    order: 6;
+  }
 }
 
 .form__legend {
   text-transform: uppercase;
+  text-align: center;
   font-size: 14px;
   line-height: 18px;
   color: $pink;
@@ -21,5 +41,9 @@
 
   &--alarm {
     color: $pink;
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 7;
   }
 }

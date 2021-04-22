@@ -1,5 +1,17 @@
 .ident-fieldset {
   background-color: transparent;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 100%;
+    order: 1;
+    min-height: 350px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 50%;
+    width: 500px;
+  }
 }
 
 .ident-fieldset__list {

@@ -1,3 +1,15 @@
+.comment-fieldset {
+  @media (min-width: $tablet-width) {
+    flex-basis: 100%;
+    order: 5;
+    min-height: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 300px;
+  }
+}
+
 .comment-fieldset__textarea {
   font: inherit;
   color: $blue-deep;

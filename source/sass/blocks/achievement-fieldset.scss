@@ -1,5 +1,16 @@
 .achievement-fieldset {
   background-color: $gray-light;
+
+  @media (min-width: $tablet-width) {
+    background-color: $white;
+    flex-basis: 100%;
+    order: 4;
+    min-height: 600px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 300px;
+  }
 }
 
 .achievement-fieldset__list {
