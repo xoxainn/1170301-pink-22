@@ -1,5 +1,17 @@
 .os-fieldset {
   background-color: $gray-light;
+
+  @media (min-width: $tablet-width) {
+    background-color: $white;
+    flex-basis: 100%;
+    order: 2;
+    min-height: 300px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 50%;
+    width: 500px;
+  }
 }
 
 .os-fieldset__list {

@@ -1,9 +1,26 @@
 .contacts-fieldset {
   background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 100%;
+    order: 3;
+    min-height: 350px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 100%;
+    min-height: 150px;
+  }
 }
 
 .contacts-fieldset__list {
   list-style: none;
+}
+
+.contacts-fieldset__legend {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 
