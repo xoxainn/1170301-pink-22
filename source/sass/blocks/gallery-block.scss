@@ -1,5 +1,21 @@
 .gallery-block {
   background-color: $gray-light;
+
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 50%;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 33%;
+  }
+
+  &--day-photo {
+    @media (min-width: $tablet-width) {
+      flex-basis: 100%;
+    }
+  }
 }
 
 .gallery-block__image {

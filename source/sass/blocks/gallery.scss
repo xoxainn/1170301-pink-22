@@ -17,4 +17,10 @@
 
 .gallery__list {
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 }
