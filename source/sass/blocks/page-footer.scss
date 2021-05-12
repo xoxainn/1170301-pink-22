@@ -3,7 +3,14 @@
   color: $blue-deep;
 
   @media (min-width: $tablet-width) {
+    min-height: 127px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px 40px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 80px 130px;
   }
 }

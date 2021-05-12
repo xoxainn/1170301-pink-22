@@ -1,5 +1,19 @@
+.site-creator {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-around;
+    align-items: center;
+    width: 160px;
+    margin-bottom: 0;
+  }
+}
+
 .site-creator__description {
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
+  margin-right: 20px;
 }

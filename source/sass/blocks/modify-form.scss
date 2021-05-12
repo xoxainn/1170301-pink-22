@@ -1,25 +1,190 @@
 .modify-form {
   background-color: $gray-light;
+  padding: 20px 20px 50px;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(1fr, 4);
+    justify-items: center;
+    padding: 50px 20px;
   }
 
   @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: repeat(1fr, 4);
-    grid-template-rows: repeat(1fr, 4);
+    display: flex;
+    padding: 57px 80px;
   }
 }
 
 .modify-form__list {
   list-style: none;
+  padding: 0;
+  margin-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 288px;
+  }
+}
+
+.modify-form__item {
+  padding: 0 20px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 40px 0;
+    padding: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    top: 50px;
+    left: -20px;
+    background: $blue-deep;
+    opacity: 0.1;
+
+    @media (min-width: $tablet-width) {
+      width: 275px;
+      top: 36px;
+      left: -45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 410px;
+      top: 49px;
+      left: -113px;
+    }
+  }
+
+  &:nth-child(2)::after,
+  &:last-child::after {
+    @media (max-width: $mobile-width-only) {
+      opacity: 0;
+    }
+  }
+
+  &:last-child::after {
+    @media (min-width: $desktop-width) {
+      opacity: 0;
+    }
+  }
+}
+
+.modify-form__input {
+  width: 240px;
+
+  &--fill,
+  &--contrast {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 280px;
+  }
+}
+
+input[type="range"] {
+  /* stylelint-disable-next-line */
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: $blue-deep;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  border: 2px solid $pink;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: $white;
+  cursor: pointer;
+  /* stylelint-disable-next-line */
+  -webkit-appearance: none;
+  margin-top: -6px;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: $gray-light;
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: $blue-deep;
+}
+
+input[type="range"]::-moz-range-thumb {
+  border: 2px solid $pink;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: $white;
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: $gray-light;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+
+/*input[type="range"]::-ms-fill-lower {
+  background: $pink;
+  border: 0.2px solid #010101;
+}*/
+
+input[type="range"]::-ms-fill-upper {
+  background: $gray-light;
+}
+
+input[type="range"]::-ms-thumb {
+  border: 2px solid $pink;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: $white;
+  cursor: pointer;
+}
+
+input[type="range"]:focus::-ms-fill-lower {
+  background: $gray-light;
+}
+
+input[type="range"]:focus::-ms-fill-upper {
+  background: $gray-light;
 }
 
 .modify-form__button {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 18px;
   width: 280px;
@@ -27,16 +192,20 @@
   border: 3px solid $pink;
   border-radius: 30px;
   color: $pink;
+  margin-bottom: 15px;
 
   @media (min-width: $tablet-width) {
     width: 260px;
+    margin-bottom: 24px;
   }
 
   @media (min-width: $desktop-width) {
     width: 183px;
+    margin: 0;
+    margin-top: 70px;
   }
 
-  &--post {
+  /* &--post {
     @media (min-width: $tablet-width) {
       grid-column: 2/3;
       grid-row: 3/4;
@@ -46,17 +215,15 @@
       grid-column: 3/4;
       grid-row: 4/5;
     }
-  }
+  }*/
 
   &--cancel {
-    @media (min-width: $tablet-width) {
-      grid-column: 2/3;
-      grid-row: 4/5;
-    }
+    color: $blue-transparent;
+    border-color: $blue-transparent;
 
-    @media (min-width: $desktop-width) {
-      grid-column: 4/5;
-      grid-row: 4/5;
+    &:hover {
+      color: $pink;
+      border-color: $pink;
     }
   }
 }

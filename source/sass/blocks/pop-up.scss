@@ -1,12 +1,28 @@
+.pop-up {
+  background-color: $white;
+  box-shadow: 0 7px 15px $black-shadow;
+  border-radius: 5px;
+  text-align: center;
+}
+
 .pop-up__title {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .pop-up__text {
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
 }

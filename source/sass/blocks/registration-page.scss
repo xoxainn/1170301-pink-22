@@ -2,10 +2,45 @@
   font-size: 24px;
   line-height: 33px;
   color: $white;
+  background-image: url("../../img/back-mobile.jpg");
+  object-fit: fill;
+  padding: 80px 20px 53px;
+  text-align: center;
+  margin-top: -60px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 50px;
+    line-height: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 150px 130px 53px;
+    margin-top: -120px;
+  }
+}
+
+.registration-page__note {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+  }
 }
 
 .registration-page__subtitle {
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
+  padding: 20px 20px 40px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    width: 540px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 820px;
+  }
 }

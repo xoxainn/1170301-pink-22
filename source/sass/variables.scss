@@ -1,5 +1,6 @@
 //colors
 $black:rgba(0, 0, 0, 1);
+$black-shadow:rgba(0, 1, 1, 0.15);
 $black-transparent:rgba($black, 0.3);
 $white:rgba(255, 255, 255, 1);
 $white-transparent:rgba($white, 0.15);
@@ -12,5 +13,7 @@ $pink:rgba(210, 40, 86, 1);
 $green:rgba(42, 171, 109, 1);
 
 //viewports
+$mobile-width-only:659px;
 $tablet-width: 660px;
 $desktop-width: 1200px;
+$desktop-width-only: 1199px;

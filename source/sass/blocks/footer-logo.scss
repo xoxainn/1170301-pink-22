@@ -1,3 +1,9 @@
 .footer-logo {
   background-color: $white;
+  width: 155px;
+  margin: 31px auto 37px auto;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 30px 10px 0;
+  }
 }

@@ -1,3 +1,13 @@
 .slider {
   background-color: transparent;
 }
+
+.slider__toggle {
+  padding: 0;
+  border: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $blue-deep;
+  opacity: 0.3;
+}

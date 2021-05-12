@@ -1,5 +1,18 @@
 .prices {
   background-color: $gray-light;
+  min-height: 500px;
+  width: 100%;
+  overflow: hidden;
+  clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 100%);
+
+  @media (min-width: $tablet-width) {
+    min-height: 340px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding: 150px 130px 100px;
+  }
 }
 
 .prices__toggles-list {

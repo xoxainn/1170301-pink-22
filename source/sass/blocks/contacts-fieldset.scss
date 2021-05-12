@@ -4,7 +4,8 @@
   @media (min-width: $tablet-width) {
     flex-basis: 100%;
     order: 3;
-    min-height: 350px;
+    width: 620px;
+    margin: 0 16px 70px;
   }
 
   @media (min-width: $desktop-width) {
@@ -13,12 +14,46 @@
   }
 }
 
+.contacts-fieldset__wrapper {
+  padding: 40px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 30px 60px;
+  }
+}
+
 .contacts-fieldset__list {
   list-style: none;
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+  }
+}
+
+.contacts-fieldset__item {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    width: 370px;
+  }
 }
 
 .contacts-fieldset__legend {
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width-only) {
     display: none;
   }
 }
@@ -26,11 +61,65 @@
 
 .contacts-fieldset__label {
   text-transform: uppercase;
+  display: block;
+  margin-bottom: 14px;
   font-size: 14px;
   color: $pink;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    &--tel::after {
+      content: "";
+      position: absolute;
+      width: 59px;
+      height: 59px;
+      top: -79px;
+      left: 484px;
+      background-image: url("../../img/phone-icon.png");
+      background-color: $gray;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &--mail::after {
+      content: "";
+      position: absolute;
+      width: 59px;
+      height: 59px;
+      top: -79px;
+      left: 484px;
+      background-image: url("../../img/mail-icon.png");
+      background-color: $gray;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+
+    &--tel::after {
+      top: -79px;
+      left: 309px;
+    }
+
+    &--mail::after {
+      top: -79px;
+      left: 309px;
+    }
+  }
 }
 
 .contacts-fieldset__input {
+  width: 100%;
+  padding: 13px 83px 12px 20px;
+  border: 2px solid $gray;
+  border-radius: 1px;
   font: inherit;
   color: $blue-deep;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }

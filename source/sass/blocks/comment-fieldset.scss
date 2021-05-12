@@ -1,4 +1,6 @@
 .comment-fieldset {
+  width: 100%;
+
   @media (min-width: $tablet-width) {
     flex-basis: 100%;
     order: 5;
@@ -10,7 +12,22 @@
   }
 }
 
+.comment-fieldset__legend {
+  @media (max-width: $mobile-width-only) {
+    width: 232px;
+    margin: 28px auto -30px;
+  }
+}
+
+.comment-fieldset__wrapper {
+  padding: 50px 20px;
+}
+
 .comment-fieldset__textarea {
   font: inherit;
+  resize: none;
+  width: 100%;
+  min-height: 200px;
   color: $blue-deep;
+  border: 2px solid $gray;
 }

@@ -1,19 +1,92 @@
 .os-fieldset {
   background-color: $gray-light;
 
-  @media (min-width: $tablet-width) {
+  @media (max-width: $mobile-width-only) {
+    padding-top: 50px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width-only) {
     background-color: $white;
+    width: 620px;
+    margin: 0 16px 70px;
     flex-basis: 100%;
     order: 2;
-    min-height: 300px;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    width: 430px;
+    background-color: $white;
+  }
+}
+
+.os-fieldset__legend {
+  @media (max-width: $mobile-width-only) {
+    width: 232px;
+    margin: 28px auto -90px;
+  }
+}
+
+.os-fieldset__wrapper {
+  padding: 40px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 20px;
   }
 
   @media (min-width: $desktop-width) {
-    flex-basis: 50%;
-    width: 500px;
+    padding: 50px 75px 0;
   }
 }
 
 .os-fieldset__list {
   list-style: none;
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.os-fieldset__input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.os-fieldset__label {
+  display: block;
+}
+
+.os-fieldset__input + .os-fieldset__label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 37px;
+    height: 37px;
+    margin-right: 30px;
+    border: 2px solid $gray;
+    border-radius: 50%;
+    background-color: $white;
+    background-size: 50% 50%;
+    background-position: center center;
+  }
+}
+
+.os-fieldset__input:checked + .os-fieldset__label::before {
+  background-image: url("../../img/Ellipse-small.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 50%;
+}
+
+.os-fieldset__item {
+  margin-bottom: 50px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+  }
 }

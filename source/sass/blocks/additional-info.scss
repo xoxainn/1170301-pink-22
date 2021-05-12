@@ -3,8 +3,9 @@
   background-color: $white;
   font-weight: normal;
   font-size: 14px;
+  position: relative;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width-only) {
     display: none;
   }
 
@@ -14,17 +15,90 @@
   }
 }
 
+.additional-info__wrapper {
+  position: relative;
+  width: 660px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 100px 20px 40px 300px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 245px;
+    height: 300px;
+    top: 34px;
+    left: 20px;
+    background-image: url("../../img/diagram-fill.png"), url("../../img/timer.png"), url("../../img/24.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 26px 66px, 7px 10px, 74px 131px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+    padding: 104px 130px 60px 500px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 298px;
+      height: 345px;
+      top: 0;
+      left: 122px;
+      background-image: url("../../img/diagram-fill-desktop.png"), url("../../img/timer-desktop.png"), url("../../img/24-desktop.png");
+      background-repeat: no-repeat, no-repeat, no-repeat;
+      background-position: 23px 68px, 0 -1px, 83px 145px;
+    }
+  }
+}
+
 .additional-info__title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  width: 168px;
   color: $black;
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    line-height: 30px;
+    width: 300px;
+  }
 }
 
 .additional-info__description {
   color: $blue-deep;
+  line-height: 24px;
+  padding-right: 40px;
+
+
+  @media (min-width: $desktop-width) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
 .additional-info__link {
   color: $pink;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.additional-info__brake {
+  @media (max-width: $desktop-width-only) {
+    &--desktop {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--tablet {
+      display: none;
+    }
+  }
 }

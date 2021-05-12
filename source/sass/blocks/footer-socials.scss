@@ -1,7 +1,15 @@
+.footer-socials {
+  margin: 0 auto 40px;
+}
+
 .footer-socials__list {
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  padding: 0;
+  margin: 0 15px 0;
 }
 
 .footer-socials__item {
@@ -9,4 +17,33 @@
   height: 48px;
   border: 3px solid $blue-transparent;
   border-radius: 50%;
+  margin-right: 12px;
+}
+
+.footer-socials__link {
+  display: block;
+
+  &--twitter {
+    width: 18px;
+    height: 14px;
+    position: relative;
+    top: 5px;
+    left: 13px;
+  }
+
+  &--facebook {
+    width: 9px;
+    height: 18px;
+    position: relative;
+    top: 6px;
+    left: 16px;
+  }
+
+  &--youtube {
+    width: 15px;
+    height: 13px;
+    position: relative;
+    top: 5px;
+    left: 15px;
+  }
 }
